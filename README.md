@@ -218,15 +218,7 @@ Mini Project/
    npx prisma generate
    ```
 
-5. **Buat Admin User (Opsional)**
-   ```sh
-   node scripts/create-admin.js
-   ```
-   Credentials default admin:
-   - Email: `admin@example.com`
-   - Password: `Admin123!`
-
-6. **Jalankan server**
+5. **Jalankan server**
    ```sh
    # Development (dengan auto-restart)
    npm run dev
@@ -235,6 +227,20 @@ Mini Project/
    npm start
    ```
    API akan berjalan di `http://localhost:3000/api/v1/`
+
+6. **Buat Admin User (Opsional)**
+  ```bash
+  POST /api/v1/auth/register
+  Content-Type: application/json
+  
+  {
+    "name": "John Doe",
+    "email": "john@example.com", 
+    "password": "SecurePass123!",
+    "password_confirmation": "SecurePass123!"
+    "role": "admin"
+  }
+  ```
 
 ---
 
@@ -336,8 +342,8 @@ npx prisma generate
 - Login ulang untuk mendapatkan token baru
 
 ### Admin Access
-- Gunakan script `create-admin.js` untuk membuat admin user
-- Atau register user biasa lalu update role di database
+- Register user admin melalui POSTMAN
+- Register user biasa lalu update role di database
 
 ---
 
