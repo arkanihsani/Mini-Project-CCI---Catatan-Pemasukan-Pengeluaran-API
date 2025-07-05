@@ -72,7 +72,6 @@ Mini Project/
   - `domains/` — modularisasi fitur utama (auth, pemasukan, pengeluaran).
 - `.env` — konfigurasi environment (port, database, jwt secret).
 - `package.json` — dependensi dan script npm.
-- `ADMIN_API.md` — dokumentasi khusus API admin.
 
 ## 🔌 Plugin/Library yang Digunakan
 
