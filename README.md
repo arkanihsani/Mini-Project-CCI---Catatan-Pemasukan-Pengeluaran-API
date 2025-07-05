@@ -318,8 +318,6 @@ Content-Type: application/json
 
 ## 📁 File Penting
 
-- `ADMIN_API.md` — Dokumentasi lengkap untuk admin endpoints
-- `scripts/create-admin.js` — Script untuk membuat user admin
 - `src/utils/logger.js` — Konfigurasi logging
 - `src/errors/` — Custom error handling
 - `prisma/schema.prisma` — Database schema definition
@@ -346,5 +344,3 @@ npx prisma generate
 - Register user biasa lalu update role di database
 
 ---
-
-**Catatan:** Proyek ini dibuat untuk keperluan pembelajaran dan portfolio. Untuk production, pastikan untuk menggunakan environment variables yang aman dan implementasi security tambahan.
