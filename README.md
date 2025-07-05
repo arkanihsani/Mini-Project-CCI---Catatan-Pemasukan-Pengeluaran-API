@@ -23,7 +23,7 @@ Proyek sederhana pengelola keuangan pribadi menggunakan Express.js dengan fitur 
 ```
 Mini Project/
 ├── prisma/
-|    ├── migrations/
+|   ├── migrations/
 │   └── schema.prisma
 ├── src/
 │   ├── app.js
