@@ -63,7 +63,6 @@ export const registerSchema = Joi.object({
 });
 
 export const getMeSchema = Joi.object({
-  // No body validation needed since id comes from authenticated user
 });
 
 export const updateProfileSchema = Joi.object({

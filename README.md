@@ -23,7 +23,7 @@ Proyek sederhana pengelola keuangan pribadi menggunakan Express.js dengan fitur 
 ```
 Mini Project/
 ├── prisma/
-|    ├── migrations/
+|   ├── migrations/
 │   └── schema.prisma
 ├── src/
 │   ├── app.js
@@ -72,7 +72,6 @@ Mini Project/
   - `domains/` — modularisasi fitur utama (auth, pemasukan, pengeluaran).
 - `.env` — konfigurasi environment (port, database, jwt secret).
 - `package.json` — dependensi dan script npm.
-- `ADMIN_API.md` — dokumentasi khusus API admin.
 
 ## 🔌 Plugin/Library yang Digunakan
 
@@ -219,15 +218,7 @@ Mini Project/
    npx prisma generate
    ```
 
-5. **Buat Admin User (Opsional)**
-   ```sh
-   node scripts/create-admin.js
-   ```
-   Credentials default admin:
-   - Email: `admin@example.com`
-   - Password: `Admin123!`
-
-6. **Jalankan server**
+5. **Jalankan server**
    ```sh
    # Development (dengan auto-restart)
    npm run dev
@@ -236,6 +227,20 @@ Mini Project/
    npm start
    ```
    API akan berjalan di `http://localhost:3000/api/v1/`
+
+6. **Buat Admin User (Opsional)**
+  ```bash
+  POST /api/v1/auth/register
+  Content-Type: application/json
+  
+  {
+    "name": "John Doe",
+    "email": "john@example.com", 
+    "password": "SecurePass123!",
+    "password_confirmation": "SecurePass123!"
+    "role": "admin"
+  }
+  ```
 
 ---
 
@@ -313,8 +318,6 @@ Content-Type: application/json
 
 ## 📁 File Penting
 
-- `ADMIN_API.md` — Dokumentasi lengkap untuk admin endpoints
-- `scripts/create-admin.js` — Script untuk membuat user admin
 - `src/utils/logger.js` — Konfigurasi logging
 - `src/errors/` — Custom error handling
 - `prisma/schema.prisma` — Database schema definition
@@ -337,9 +340,7 @@ npx prisma generate
 - Login ulang untuk mendapatkan token baru
 
 ### Admin Access
-- Gunakan script `create-admin.js` untuk membuat admin user
-- Atau register user biasa lalu update role di database
+- Register user admin melalui POSTMAN
+- Register user biasa lalu update role di database
 
 ---
-
-**Catatan:** Proyek ini dibuat untuk keperluan pembelajaran dan portfolio. Untuk production, pastikan untuk menggunakan environment variables yang aman dan implementasi security tambahan.
